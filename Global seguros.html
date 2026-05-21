@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlobalSeguros — Seguros Educativos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="Global.css" />
+</head>
+<body>
+
+  <!-- ========================
+       NAVEGACIÓN
+  ========================= -->
+  <nav>
+    <div class="logo-wrap">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="logo-txt"><span>Global</span><span>Seguros</span></div>
+    </div>
+    <div class="nav-links">
+      <a onclick="ir('hero')">Inicio</a>
+      <a onclick="ir('planes')">Planes</a>
+      <a onclick="ir('contacto')">Asesor</a>
+      <a onclick="ir('login')" class="nav-btn">Iniciar sesión</a>
+    </div>
+  </nav>
+
+  <!-- ========================
+       HERO
+  ========================= -->
+  <section id="hero">
+    <div class="hero-layout">
+
+      <!-- Izquierda: título del plan -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">🎓 Seguros Educativos · GlobalSeguros</div>
+        <h1 class="hero-title">El futuro de tu hijo<br>comienza <em>hoy</em></h1>
+        <div class="hero-actions">
+          <button class="btn-amarillo" onclick="ir('planes')">Ver planes</button>
+          <button class="btn-azul-out" onclick="ir('contacto')">Hablar con un asesor</button>
+        </div>
+      </div>
+
+      <!-- Centro: cofre animado -->
+      <div class="hero-chest">
+        <img src="cofre.png" alt="Cofre GlobalSeguros" />
+      </div>
+
+      <!-- Derecha: características destacadas -->
+      <div class="hero-right">
+        <div class="hero-feat">
+          <span class="hero-feat-ico">🎓</span>
+          <span>100% matrícula universitaria garantizada</span>
+        </div>
+        <div class="hero-feat">
+          <span class="hero-feat-ico">🏛️</span>
+          <span>Cualquier universidad en Colombia</span>
+        </div>
+        <div class="hero-feat">
+          <span class="hero-feat-ico">🌍</span>
+          <span>Opción de estudio en el exterior</span>
+        </div>
+        <div class="hero-feat">
+          <span class="hero-feat-ico">🛡️</span>
+          <span>Seguro de vida al tomador incluido</span>
+        </div>
+        <div class="hero-feat">
+          <span class="hero-feat-ico">💰</span>
+          <span>Renta de 2 SMMLV × 12 meses</span>
+        </div>
+        <div class="hero-feat">
+          <span class="hero-feat-ico">📅</span>
+          <span>Hasta 5 años / 10 pagos cómodos</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================
+       MOTIVACIÓN
+  ========================= -->
+  <section id="motivacion">
+    <div class="motiv-inner">
+      <p class="motiv-q">"La mejor herencia que le puedes dar a tu hijo<br>es una <em>educación asegurada</em>"</p>
+      <p class="motiv-s">Un solo paso hoy protege el sueño universitario de tu familia para siempre.</p>
+    </div>
+  </section>
+
+  <!-- ========================
+       PLANES
+  ========================= -->
+  <section id="planes" class="section">
+    <div class="sec-inner">
+      <div class="sec-label">Nuestros planes</div>
+      <h2 class="sec-title">Elige el plan ideal para tu familia</h2>
+
+      <div class="planes-grid">
+
+        <!-- PLATINO -->
+        <div class="plan-card top reveal">
+          <div class="plan-head">
+            <div class="plan-badge-top">✦ Platino</div>
+            <div class="plan-ico"><i class="ti ti-award"></i></div>
+            <div class="plan-name">GlobalUniversidad<br>Garantizada Platino</div>
+            <div class="plan-sub">Máxima cobertura y flexibilidad</div>
+          </div>
+          <div class="plan-feats">
+            <div class="fi"><span class="ck">✓</span><span>100% matrícula ordinaria garantizada</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Cualquier universidad en Colombia</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Hasta 5 años / 10 pagos <span class="dif">Exclusivo</span></span></div>
+            <div class="fi"><span class="ck">✓</span><span>Cubre pregrado en el exterior <span class="dif">Exclusivo</span></span></div>
+            <div class="fi"><span class="ck">✓</span><span>Opción posgrado incluida <span class="dif">Exclusivo</span></span></div>
+            <div class="fi"><span class="ck">✓</span><span>Seguro de vida tomador incluido</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Renta 2 SMMLV × 12 meses al tomador</span></div>
+          </div>
+          <div class="plan-foot">
+            <button class="pb pb-yellow" onclick="ir('contacto')">¡Lo quiero!</button>
+          </div>
+        </div>
+
+        <!-- GARANTIZADA -->
+        <div class="plan-card reveal">
+          <div class="plan-head">
+            <div class="plan-ico"><i class="ti ti-school"></i></div>
+            <div class="plan-name">GlobalUniversidad<br>Garantizada</div>
+            <div class="plan-sub">Cobertura completa, gran respaldo</div>
+          </div>
+          <div class="plan-feats">
+            <div class="fi"><span class="ck">✓</span><span>100% matrícula ordinaria garantizada</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Cualquier universidad en Colombia</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Hasta 5 años / 10 pagos</span></div>
+            <div class="fi"><span class="cx">✗</span><span class="grey">No cubre exterior</span></div>
+            <div class="fi"><span class="cx">✗</span><span class="grey">Sin opción posgrado</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Seguro de vida tomador incluido</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Renta 2 SMMLV × 12 meses al tomador</span></div>
+          </div>
+          <div class="plan-foot">
+            <button class="pb pb-outline" onclick="ir('contacto')">¡Lo quiero!</button>
+          </div>
+        </div>
+
+        <!-- SEMESTRES -->
+        <div class="plan-card reveal">
+          <div class="plan-head">
+            <div class="plan-ico"><i class="ti ti-books"></i></div>
+            <div class="plan-name">GlobalSemestres</div>
+            <div class="plan-sub">Flexibilidad por semestres</div>
+          </div>
+          <div class="plan-feats">
+            <div class="fi"><span class="ck">✓</span><span>100% matrícula ordinaria garantizada</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Cualquier universidad en Colombia</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Semestres adquiridos (flexible)</span></div>
+            <div class="fi"><span class="cx">✗</span><span class="grey">No cubre exterior</span></div>
+            <div class="fi"><span class="cx">✗</span><span class="grey">Sin opción posgrado</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Seguro de vida tomador incluido</span></div>
+            <div class="fi"><span class="ck">✓</span><span>Renta 2 SMMLV × 12 meses al tomador</span></div>
+          </div>
+          <div class="plan-foot">
+            <button class="pb pb-outline" onclick="ir('contacto')">¡Lo quiero!</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       CONTACTO
+  ========================= -->
+  <section id="contacto" class="section">
+    <div class="sec-inner">
+      <div class="sec-label">Solicita tu asesor</div>
+      <h2 class="sec-title">Un experto te guía sin costo</h2>
+
+      <div class="contacto-grid">
+
+        <div class="c-info reveal">
+          <h3>¿Tienes dudas? Nosotros te llamamos</h3>
+          <p>Un asesor certificado de GlobalSeguros se comunicará contigo para explicarte todos los detalles y ayudarte a elegir el plan perfecto para tu familia.</p>
+          <div class="c-item">
+            <div class="c-ico"><i class="ti ti-phone"></i></div>
+            <span>01 8000 910027 — Línea nacional gratuita</span>
+          </div>
+          <div class="c-item">
+            <div class="c-ico"><i class="ti ti-device-mobile"></i></div>
+            <span>601 744 0084 — Bogotá</span>
+          </div>
+          <div class="c-item">
+            <div class="c-ico"><i class="ti ti-world"></i></div>
+            <span>www.globalseguroscolombia.com</span>
+          </div>
+          <div class="c-item">
+            <div class="c-ico"><i class="ti ti-clock"></i></div>
+            <span>Lun – Vie · 8:00 am – 6:00 pm</span>
+          </div>
+        </div>
+
+        <div class="form-wrap reveal">
+          <div class="form-ttl">Solicitar asesor personalizado</div>
+          <div class="f-row">
+            <div class="fg">
+              <label>Nombre</label>
+              <input type="text" placeholder="Tu nombre" />
+            </div>
+            <div class="fg">
+              <label>Apellido</label>
+              <input type="text" placeholder="Tu apellido" />
+            </div>
+          </div>
+          <div class="fg">
+            <label>Teléfono</label>
+            <input type="tel" placeholder="300 000 0000" />
+          </div>
+          <div class="fg">
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="tucorreo@email.com" />
+          </div>
+          <div class="fg">
+            <label>Plan de interés</label>
+            <select>
+              <option value="">Selecciona un plan</option>
+              <option>GlobalUniversidad Garantizada Platino</option>
+              <option>GlobalUniversidad Garantizada</option>
+              <option>GlobalSemestres</option>
+              <option>No sé, necesito orientación</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Mensaje (opcional)</label>
+            <textarea placeholder="Cuéntanos sobre tu hijo y lo que buscas…"></textarea>
+          </div>
+          <button class="f-sub" onclick="document.getElementById('ok').style.display='block'">
+            Solicitar asesor →
+          </button>
+          <div id="ok">✓ ¡Listo! Un asesor te contactará muy pronto.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       LOGIN
+  ========================= -->
+  <section id="login">
+    <div class="l-inner">
+      <h2 class="l-title">Inicio de sesión</h2>
+      <p class="l-sub">Consulta tu cobertura, pagos y beneficios en línea</p>
+      <div class="l-card">
+        <div class="l-inp-wrap">
+          <i class="ti ti-user l-ico"></i>
+          <input type="text" placeholder="Número de teléfono o correo" />
+        </div>
+        <div class="l-inp-wrap">
+          <i class="ti ti-lock l-ico"></i>
+          <input type="password" placeholder="Contraseña" />
+        </div>
+        <button class="l-btn">Ingresar</button>
+        <div class="l-foot">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+          &nbsp;·&nbsp;
+          <a href="#" onclick="ir('contacto')">Crear cuenta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       FOOTER
+  ========================= -->
+  <footer>
+    <div class="f-logo"><span>Global</span><span>Seguros</span></div>
+    <p>© 2025 Global Seguros de Vida S.A. · Vigilado Superintendencia Financiera de Colombia</p>
+  </footer>
+
+  <!-- ========================
+       JAVASCRIPT
+  ========================= -->
+  <script>
+    function ir(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('vis');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
