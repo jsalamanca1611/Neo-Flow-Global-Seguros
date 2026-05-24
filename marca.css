@@ -737,6 +737,250 @@ footer p {
 }
 
 /* ==========================================================================
+   VIAJE
+   ========================================================================== */
+#viaje {
+  background-color: var(--gris-suave);
+  padding: 80px 5%;
+}
+
+.viaje-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.viaje-titulo {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--azul-oscuro);
+  margin-bottom: 60px;
+}
+
+/* La escena es el contenedor de posicionamiento */
+.viaje-escena {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+/* Círculo traslúcido del cofre */
+.viaje-cofre-wrap {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: var(--blanco);
+  border: 1px solid var(--azul-borde);
+  box-shadow: 0 8px 32px rgba(0, 50, 125, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.viaje-video {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+}
+
+/* Botón oculto, posicionado a la derecha de forma absoluta */
+.viaje-btn {
+  position: absolute;
+  right: 8%;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  border: none;
+  border-radius: 8px;
+  padding: 22px 36px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease 0.35s;
+}
+
+.viaje-btn:hover {
+  background-color: var(--azul-medio);
+}
+
+/* ── ESTADO ACTIVO (clase añadida por JS) ── */
+#viaje.section-viaje--activa .viaje-cofre-wrap {
+  transform: translateX(-160px) rotate(-14deg) scale(0.88);
+}
+
+#viaje.section-viaje--activa .viaje-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   PAGO — Oculto por defecto, se revela con clase
+   ========================================================================== */
+#pago {
+  background-color: var(--blanco);
+  padding: 0 5%;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.9s ease, opacity 0.6s ease 0.2s, padding 0.4s ease;
+}
+
+#pago.pago--visible {
+  max-height: 1400px;
+  opacity: 1;
+  padding: 80px 5%;
+}
+
+.pago-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pago-titulo {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--azul-medio);
+  margin-bottom: 6px;
+}
+
+.pago-sub {
+  font-size: 14px;
+  color: var(--gris-muted);
+  margin-bottom: 36px;
+}
+
+.pago-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  border: 1px solid var(--azul-borde);
+  border-radius: 12px;
+  padding: 32px;
+  background-color: var(--gris-suave);
+}
+
+.pago-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pago-col-titulo {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--azul-borde);
+  margin-bottom: 4px;
+}
+
+.pago-field-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gris-muted);
+}
+
+.pago-field {
+  height: 42px;
+  background-color: var(--blanco);
+  border: 1px solid var(--azul-borde);
+  border-radius: 6px;
+}
+
+.pago-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 12px;
+}
+
+.pago-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.pago-submit:hover {
+  background-color: var(--azul-medio);
+}
+
+.pago-resumen-head {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--azul-borde);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pago-plan-nombre {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+}
+
+.pago-plan-sub {
+  font-size: 12px;
+  color: var(--gris-muted);
+}
+
+.pago-resumen-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--gris-texto);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--azul-borde);
+}
+
+.pago-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--azul-oscuro);
+  padding-top: 16px;
+}
+
+.pago-total small {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gris-muted);
+  margin-left: 3px;
+}
+
+/* Responsive viaje y pago */
+@media (max-width: 768px) {
+  #viaje.section-viaje--activa .viaje-cofre-wrap {
+    transform: translateX(-80px) rotate(-10deg) scale(0.82);
+  }
+  .viaje-btn {
+    right: 2%;
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+  .pago-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    RESPONSIVIDAD (MEDIA QUERIES)
    ========================================================================== */
 

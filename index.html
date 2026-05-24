@@ -290,6 +290,83 @@
   </div>
 </section>
 
+<!-- ========================
+     AQUÍ EMPIEZA TU VIAJE
+========================= -->
+<section id="viaje">
+  <div class="viaje-inner">
+    <h2 class="viaje-titulo">Aquí empieza tu viaje</h2>
+
+    <div class="viaje-escena">
+
+      <div class="viaje-cofre-wrap" id="cofreWrap" onclick="activarViaje()">
+        <video autoplay loop muted playsinline class="viaje-video">
+          <source src="https://res.cloudinary.com/dayzeqqf1/video/upload/v1779385618/CofreRender_hmlxdy.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <button class="viaje-btn" id="viajeBtn" onclick="mostrarPago()">
+        Agrega el tesoro<br>de este mes
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     FINALIZA TU INVERSIÓN
+========================= -->
+<section id="pago">
+  <div class="pago-inner">
+    <h2 class="pago-titulo">Finaliza tu inversión</h2>
+    <p class="pago-sub">Asegura hoy el tesoro de su educación. El proceso es rápido y 100% seguro.</p>
+
+    <div class="pago-grid">
+
+      <div class="pago-col">
+        <div class="pago-col-titulo"><i class="ti ti-credit-card"></i> Detalles de Pago</div>
+        <div class="pago-field-label">Nombre en la tarjeta</div>
+        <div class="pago-field"></div>
+        <div class="pago-field-label">Número de tarjeta</div>
+        <div class="pago-field"></div>
+        <div class="pago-row">
+          <div>
+            <div class="pago-field-label">Fecha de Exp. (MM/AA)</div>
+            <div class="pago-field"></div>
+          </div>
+          <div>
+            <div class="pago-field-label">CVV</div>
+            <div class="pago-field"></div>
+          </div>
+        </div>
+        <button class="pago-submit">Pagar y Continuar →</button>
+      </div>
+
+      <div class="pago-col">
+        <div class="pago-col-titulo">Resumen de Inversión</div>
+        <div class="pago-resumen-head">
+          <span class="pago-plan-nombre">Seguro Educativo 'Tesoro'</span>
+          <span class="pago-plan-sub">Plan Universidad Garantizada</span>
+        </div>
+        <div class="pago-resumen-item">
+          <span>Aporte Inicial</span>
+          <span>$ 1.500.000 COP</span>
+        </div>
+        <div class="pago-resumen-item">
+          <span>Cargos Administrativos</span>
+          <span>$ 0 COP</span>
+        </div>
+        <div class="pago-total">
+          <span>Total a Pagar</span>
+          <span>$ 1.500.000 <small>COP</small></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
   <!-- ========================
        FOOTER
   ========================= -->
@@ -301,19 +378,6 @@
   <!-- ========================
        JAVASCRIPT
   ========================= -->
-  <script>
-    function ir(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('vis');
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-  </script>
-
+  <script src="app.js" defer></script>
 </body>
 </html>
