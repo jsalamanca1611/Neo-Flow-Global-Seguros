@@ -4,384 +4,296 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GlobalSeguros — Seguros Educativos</title>
-
-   <link rel="stylesheet" href="marca.css">
-
-
+  <link rel="stylesheet" href="marca.css">
 </head>
 <body>
 
-<div class="page-loader" id="pageLoader" aria-hidden="true">
-  <div class="page-loader__logo">Global<span>Seguros</span></div>
-</div>
-
-  <!-- ========================
-       NAV BAR
-  ========================= -->
-  <nav>
-  <div class="logo-wrap">
-    <img src="https://res.cloudinary.com/dayzeqqf1/image/upload/v1779385327/Logo-GS-sinfuturo_l8eujv.png" alt="Logo GlobalSeguros" class="logo-img" />
+  <!-- ============== CARGADOR ============== -->
+  <div class="cargador" id="cargador">
+    <div class="cargador-logo">Global<span>Seguros</span></div>
   </div>
 
-  <div class="nav-links">
-    <a onclick="ir('hero')">Inicio</a>
-    <a onclick="ir('planes')">Planes</a>
-    <a onclick="ir('contacto')">Asesor</a>
-    <a onclick="ir('login')" class="nav-btn">Iniciar sesión</a>
-  </div>
-</nav>
+  <!-- ============== NAVEGACIÓN ============== -->
+  <nav class="barra-nav">
+    <img
+      src="https://res.cloudinary.com/dayzeqqf1/image/upload/v1779385327/Logo-GS-sinfuturo_l8eujv.png"
+      alt="Logo GlobalSeguros"
+      class="logo"
+    />
+    <div class="enlaces-nav">
+      <a onclick="ir('inicio')">Inicio</a>
+      <a onclick="ir('planes')">Planes</a>
+      <a onclick="ir('contacto')">Asesor</a>
+      <a onclick="ir('login')" class="boton-nav">Iniciar sesión</a>
+    </div>
+  </nav>
 
-  <!-- ========================
-       HERO
-  ========================= -->
-  <section id="hero">
-    <div class="hero-layout">
+  <!-- ============== INICIO / HERO ============== -->
+  <section id="inicio" class="seccion-inicio">
+    <div class="inicio-contenido">
 
-      <!-- Izquierda: título del plan -->
-      <div class="hero-left">
-        <div class="hero-eyebrow"> Seguros Educativos  GlobalSeguros</div>
-        <h1 class="hero-title">El futuro de tu hijo<br>comienza <em>hoy</em></h1>
-        <div class="hero-actions">
-          <button class="btn-amarillo" onclick="ir('planes')">Ver planes</button>
-          <button class="btn-azul-out" onclick="ir('contacto')">Hablar con un asesor</button>
+      <div class="inicio-texto">
+        <p class="etiqueta">Seguros Educativos GlobalSeguros</p>
+        <h1 class="titulo-inicio">El futuro de tu hijo<br>comienza <em>hoy</em></h1>
+        <div class="botones-inicio">
+          <button class="boton-amarillo" onclick="ir('planes')">Ver planes</button>
+          <button class="boton-azul" onclick="ir('contacto')">Hablar con un asesor</button>
         </div>
       </div>
 
-      <video controls autoplay loop muted width="500">
-    <source src="https://res.cloudinary.com/dayzeqqf1/video/upload/v1779385618/CofreRender_hmlxdy.mp4" type="video/mp4">
-</video>
+      <video autoplay loop muted playsinline class="video-inicio">
+        <source src="https://res.cloudinary.com/dayzeqqf1/video/upload/v1779385618/CofreRender_hmlxdy.mp4" type="video/mp4">
+      </video>
 
-      <!-- Derecha: características destacadas -->
-      <div class="hero-right">
-        <div class="hero-feat">
-          <span class="hero-feat-ico"></span>
-          <span>100% matrícula universitaria garantizada</span>
-        </div>
-        <div class="hero-feat">
-          <span class="hero-feat-ico"></span>
-          <span>Cualquier universidad en Colombia</span>
-        </div>
-        <div class="hero-feat">
-          <span class="hero-feat-ico"></span>
-          <span>Opción de estudio en el exterior</span>
-        </div>
-        <div class="hero-feat">
-          <span class="hero-feat-ico"></span>
-          <span>Seguro de vida al tomador incluido</span>
-        </div>
-        <div class="hero-feat">
-          <span class="hero-feat-ico"></span>
-          <span>Renta de 2 SMMLV × 12 meses</span>
-        </div>
-        <div class="hero-feat">
-          <span class="hero-feat-ico"></span>
-          <span>Hasta 5 años / 10 pagos cómodos</span>
-        </div>
+      <ul class="caracteristicas-inicio">
+        <li>100% matrícula universitaria garantizada</li>
+        <li>Cualquier universidad en Colombia</li>
+        <li>Opción de estudio en el exterior</li>
+        <li>Seguro de vida al tomador incluido</li>
+        <li>Renta de 2 SMMLV × 12 meses</li>
+        <li>Hasta 5 años / 10 pagos cómodos</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ============== MOTIVACIÓN ============== -->
+  <section class="seccion-motivacion">
+    <p class="motivacion-frase">"La mejor herencia que le puedes dar a tu hijo<br>es una <em>educación asegurada</em>"</p>
+    <p class="motivacion-subtitulo">Un solo paso hoy protege el sueño universitario de tu familia para siempre.</p>
+  </section>
+
+  <!-- ============== PLANES ============== -->
+  <section id="planes" class="seccion-planes">
+    <p class="etiqueta-seccion">Nuestros planes</p>
+    <h2 class="titulo-seccion">Elige el plan ideal para tu familia</h2>
+
+    <div class="grilla-planes">
+
+      <!-- Plan Platino (destacado) -->
+      <div class="tarjeta-plan tarjeta-destacada aparecer">
+        <span class="insignia-plan">Platino</span>
+        <h3 class="nombre-plan">GlobalUniversidad<br>Garantizada Platino</h3>
+        <p class="descripcion-plan">Máxima cobertura y flexibilidad</p>
+        <ul class="caracteristicas-plan">
+          <li class="si">100% matrícula ordinaria garantizada</li>
+          <li class="si">Cualquier universidad en Colombia</li>
+          <li class="si">Hasta 5 años / 10 pagos</li>
+          <li class="si">Cubre pregrado en el exterior</li>
+          <li class="si">Opción posgrado incluida</li>
+          <li class="si">Seguro de vida tomador incluido</li>
+          <li class="si">Renta 2 SMMLV × 12 meses</li>
+        </ul>
+        <button class="boton-plan boton-amarillo" onclick="ir('contacto')">¡Lo quiero!</button>
+      </div>
+
+      <!-- Plan Garantizada -->
+      <div class="tarjeta-plan aparecer">
+        <h3 class="nombre-plan">GlobalUniversidad<br>Garantizada</h3>
+        <p class="descripcion-plan">Cobertura completa, gran respaldo</p>
+        <ul class="caracteristicas-plan">
+          <li class="si">100% matrícula ordinaria garantizada</li>
+          <li class="si">Cualquier universidad en Colombia</li>
+          <li class="si">Hasta 5 años / 10 pagos</li>
+          <li class="no">No cubre exterior</li>
+          <li class="no">Sin opción posgrado</li>
+          <li class="si">Seguro de vida tomador incluido</li>
+          <li class="si">Renta 2 SMMLV × 12 meses</li>
+        </ul>
+        <button class="boton-plan boton-contorno" onclick="ir('contacto')">¡Lo quiero!</button>
+      </div>
+
+      <!-- Plan Semestres -->
+      <div class="tarjeta-plan aparecer">
+        <h3 class="nombre-plan">GlobalSemestres</h3>
+        <p class="descripcion-plan">Flexibilidad por semestres</p>
+        <ul class="caracteristicas-plan">
+          <li class="si">100% matrícula ordinaria garantizada</li>
+          <li class="si">Cualquier universidad en Colombia</li>
+          <li class="si">Semestres adquiridos (flexible)</li>
+          <li class="no">No cubre exterior</li>
+          <li class="no">Sin opción posgrado</li>
+          <li class="si">Seguro de vida tomador incluido</li>
+          <li class="si">Renta 2 SMMLV × 12 meses</li>
+        </ul>
+        <button class="boton-plan boton-contorno" onclick="ir('contacto')">¡Lo quiero!</button>
       </div>
 
     </div>
   </section>
 
-  <!-- ========================
-       MOTIVACIÓN
-  ========================= -->
-  <section id="motivacion">
-    <div class="motiv-inner">
-      <p class="motiv-q">"La mejor herencia que le puedes dar a tu hijo<br>es una <em>educación asegurada</em>"</p>
-      <p class="motiv-s">Un solo paso hoy protege el sueño universitario de tu familia para siempre.</p>
-    </div>
-  </section>
+  <!-- ============== CONTACTO ============== -->
+  <section id="contacto" class="seccion-contacto">
+    <p class="etiqueta-seccion">Solicita tu asesor</p>
+    <h2 class="titulo-seccion">Un experto te guía sin costo</h2>
 
-  <!-- ========================
-       PLANES
-  ========================= -->
-  <section id="planes" class="section">
-    <div class="sec-inner">
-      <div class="sec-label">Nuestros planes</div>
-      <h2 class="sec-title">Elige el plan ideal para tu familia</h2>
+    <div class="grilla-contacto">
 
-      <div class="planes-grid">
-
-        <!-- PLATINO -->
-        <div class="plan-card top reveal">
-          <div class="plan-head">
-            <div class="plan-badge-top"> Platino</div>
-            <div class="plan-ico"><i class="ti ti-award"></i></div>
-            <div class="plan-name">GlobalUniversidad<br>Garantizada Platino</div>
-            <div class="plan-sub">Máxima cobertura y flexibilidad</div>
-          </div>
-          <div class="plan-feats">
-            <div class="fi"><span class="ck">✓</span><span>100% matrícula ordinaria garantizada</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Cualquier universidad en Colombia</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Hasta 5 años / 10 pagos <span class="dif">Exclusivo</span></span></div>
-            <div class="fi"><span class="ck">✓</span><span>Cubre pregrado en el exterior <span class="dif">Exclusivo</span></span></div>
-            <div class="fi"><span class="ck">✓</span><span>Opción posgrado incluida <span class="dif">Exclusivo</span></span></div>
-            <div class="fi"><span class="ck">✓</span><span>Seguro de vida tomador incluido</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Renta 2 SMMLV × 12 meses al tomador</span></div>
-          </div>
-          <div class="plan-foot">
-            <button class="pb pb-yellow" onclick="ir('contacto')">¡Lo quiero!</button>
-          </div>
-        </div>
-
-        <!-- GARANTIZADA -->
-        <div class="plan-card reveal">
-          <div class="plan-head">
-            <div class="plan-ico"><i class="ti ti-school"></i></div>
-            <div class="plan-name">GlobalUniversidad<br>Garantizada</div>
-            <div class="plan-sub">Cobertura completa, gran respaldo</div>
-          </div>
-          <div class="plan-feats">
-            <div class="fi"><span class="ck">✓</span><span>100% matrícula ordinaria garantizada</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Cualquier universidad en Colombia</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Hasta 5 años / 10 pagos</span></div>
-            <div class="fi"><span class="cx">✗</span><span class="grey">No cubre exterior</span></div>
-            <div class="fi"><span class="cx">✗</span><span class="grey">Sin opción posgrado</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Seguro de vida tomador incluido</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Renta 2 SMMLV × 12 meses al tomador</span></div>
-          </div>
-          <div class="plan-foot">
-            <button class="pb pb-outline" onclick="ir('contacto')">¡Lo quiero!</button>
-          </div>
-        </div>
-
-        <!-- SEMESTRES -->
-        <div class="plan-card reveal">
-          <div class="plan-head">
-            <div class="plan-ico"><i class="ti ti-books"></i></div>
-            <div class="plan-name">GlobalSemestres</div>
-            <div class="plan-sub">Flexibilidad por semestres</div>
-          </div>
-          <div class="plan-feats">
-            <div class="fi"><span class="ck">✓</span><span>100% matrícula ordinaria garantizada</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Cualquier universidad en Colombia</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Semestres adquiridos (flexible)</span></div>
-            <div class="fi"><span class="cx">✗</span><span class="grey">No cubre exterior</span></div>
-            <div class="fi"><span class="cx">✗</span><span class="grey">Sin opción posgrado</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Seguro de vida tomador incluido</span></div>
-            <div class="fi"><span class="ck">✓</span><span>Renta 2 SMMLV × 12 meses al tomador</span></div>
-          </div>
-          <div class="plan-foot">
-            <button class="pb pb-outline" onclick="ir('contacto')">¡Lo quiero!</button>
-          </div>
-        </div>
-
+      <div class="contacto-info aparecer">
+        <h3>¿Tienes dudas? Nosotros te llamamos</h3>
+        <p>Un asesor certificado de GlobalSeguros se comunicará contigo para explicarte todos los detalles y ayudarte a elegir el plan perfecto.</p>
+        <ul class="datos-contacto">
+          <li>📞 01 8000 910027 — Línea nacional gratuita</li>
+          <li>📱 601 744 0084 — Bogotá</li>
+          <li>🌐 www.globalseguroscolombia.com</li>
+          <li>🕐 Lun – Vie · 8:00 am – 6:00 pm</li>
+        </ul>
       </div>
+
+      <form class="formulario-contacto aparecer" onsubmit="event.preventDefault(); mostrarOk();">
+        <h3 class="titulo-formulario">Solicitar asesor personalizado</h3>
+
+        <div class="fila-formulario">
+          <div class="campo">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
+          </div>
+          <div class="campo">
+            <label>Apellido</label>
+            <input type="text" placeholder="Tu apellido">
+          </div>
+        </div>
+
+        <div class="campo">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="300 000 0000">
+        </div>
+
+        <div class="campo">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="tucorreo@email.com">
+        </div>
+
+        <div class="campo">
+          <label>Plan de interés</label>
+          <select>
+            <option value="">Selecciona un plan</option>
+            <option>GlobalUniversidad Garantizada Platino</option>
+            <option>GlobalUniversidad Garantizada</option>
+            <option>GlobalSemestres</option>
+            <option>No sé, necesito orientación</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label>Mensaje (opcional)</label>
+          <textarea placeholder="Cuéntanos sobre tu hijo y lo que buscas…"></textarea>
+        </div>
+
+        <button type="submit" class="boton-enviar">Solicitar asesor →</button>
+        <div id="mensaje-ok" class="mensaje-ok">✓ ¡Listo! Un asesor te contactará muy pronto.</div>
+      </form>
+
     </div>
   </section>
 
-  <!-- ========================
-       CONTACTO
-  ========================= -->
-  <section id="contacto" class="section">
-    <div class="sec-inner">
-      <div class="sec-label">Solicita tu asesor</div>
-      <h2 class="sec-title">Un experto te guía sin costo</h2>
+  <!-- ============== LOGIN ============== -->
+  <section id="login" class="seccion-login">
+    <h2 class="titulo-login">Inicio de sesión</h2>
+    <p class="subtitulo-login">Consulta tu cobertura, pagos y beneficios en línea</p>
 
-      <div class="contacto-grid">
+    <div class="tarjeta-login">
+      <input type="text" placeholder="Número de teléfono o correo">
+      <input type="password" placeholder="Contraseña">
+      <button class="boton-login">Ingresar</button>
+      <p class="pie-login">
+        <a href="#">¿Olvidaste tu contraseña?</a> ·
+        <a onclick="ir('contacto')">Crear cuenta</a>
+      </p>
+    </div>
+  </section>
 
-        <div class="c-info reveal">
-          <h3>¿Tienes dudas? Nosotros te llamamos</h3>
-          <p>Un asesor certificado de GlobalSeguros se comunicará contigo para explicarte todos los detalles y ayudarte a elegir el plan perfecto para tu familia.</p>
-          <div class="c-item">
-            <div class="c-ico"><i class="ti ti-phone"></i></div>
-            <span>01 8000 910027 — Línea nacional gratuita</span>
-          </div>
-          <div class="c-item">
-            <div class="c-ico"><i class="ti ti-device-mobile"></i></div>
-            <span>601 744 0084 — Bogotá</span>
-          </div>
-          <div class="c-item">
-            <div class="c-ico"><i class="ti ti-world"></i></div>
-            <span>www.globalseguroscolombia.com</span>
-          </div>
-          <div class="c-item">
-            <div class="c-ico"><i class="ti ti-clock"></i></div>
-            <span>Lun – Vie · 8:00 am – 6:00 pm</span>
-          </div>
-        </div>
+  <!-- ============== CONFIRMACIÓN ============== -->
+  <section class="seccion-confirmacion">
+    <div class="confirmacion-contenido">
 
-        <div class="form-wrap reveal">
-          <div class="form-ttl">Solicitar asesor personalizado</div>
-          <div class="f-row">
-            <div class="fg">
-              <label>Nombre</label>
-              <input type="text" placeholder="Tu nombre" />
-            </div>
-            <div class="fg">
-              <label>Apellido</label>
-              <input type="text" placeholder="Tu apellido" />
-            </div>
-          </div>
-          <div class="fg">
-            <label>Teléfono</label>
-            <input type="tel" placeholder="300 000 0000" />
-          </div>
-          <div class="fg">
-            <label>Correo electrónico</label>
-            <input type="email" placeholder="tucorreo@email.com" />
-          </div>
-          <div class="fg">
-            <label>Plan de interés</label>
-            <select>
-              <option value="">Selecciona un plan</option>
-              <option>GlobalUniversidad Garantizada Platino</option>
-              <option>GlobalUniversidad Garantizada</option>
-              <option>GlobalSemestres</option>
-              <option>No sé, necesito orientación</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label>Mensaje (opcional)</label>
-            <textarea placeholder="Cuéntanos sobre tu hijo y lo que buscas…"></textarea>
-          </div>
-          <button class="f-sub" onclick="document.getElementById('ok').style.display='block'">
-            Solicitar asesor →
-          </button>
-          <div id="ok">✓ ¡Listo! Un asesor te contactará muy pronto.</div>
-        </div>
-
+      <div class="confirmacion-texto aparecer">
+        <p class="etiqueta-amarilla">¡Solicitud recibida!</p>
+        <h2 class="titulo-confirmacion">¡Haz tomado la mejor decisión<br>para el futuro de tu hijo!</h2>
+        <p class="descripcion-confirmacion">Hemos recibido tu solicitud de manera exitosa. Un asesor experto de GlobalSeguros se pondrá en contacto contigo pronto para brindarte toda la información y guiarte en el siguiente paso.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- ========================
-       LOGIN
-  ========================= -->
-  <section id="login">
-    <div class="l-inner">
-      <h2 class="l-title">Inicio de sesión</h2>
-      <p class="l-sub">Consulta tu cobertura, pagos y beneficios en línea</p>
-      <div class="l-card">
-        <div class="l-inp-wrap">
-          <i class="ti ti-user l-ico"></i>
-          <input type="text" placeholder="Número de teléfono o correo" />
-        </div>
-        <div class="l-inp-wrap">
-          <i class="ti ti-lock l-ico"></i>
-          <input type="password" placeholder="Contraseña" />
-        </div>
-        <button class="l-btn">Ingresar</button>
-        <div class="l-foot">
-          <a href="#">¿Olvidaste tu contraseña?</a>
-          &nbsp;·&nbsp;
-          <a href="#" onclick="ir('contacto')">Crear cuenta</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================
-     CONFIRMACIÓN
-========================= -->
-<section id="confirmacion">
-  <div class="conf-inner">
-
-    <div class="conf-text reveal">
-      <div class="conf-eyebrow">¡Solicitud recibida!</div>
-      <h2 class="conf-title">¡Haz tomado la mejor decisión<br>para el futuro de tu hijo!</h2>
-      <p class="conf-desc">Hemos recibido tu solicitud de manera exitosa. Un asesor experto de Global Seguros se pondrá en contacto contigo pronto para brindarte toda la información y guiarte en el siguiente paso para asegurar su educación.</p>
-    </div>
-
-    <div class="conf-img-wrap reveal">
       <img
         src="https://res.cloudinary.com/dayzeqqf1/image/upload/v1779385327/Logo-GS-sinfuturo_l8eujv.png"
-        alt="Personaje Global Seguros"
-        class="conf-img"
+        alt="GlobalSeguros"
+        class="imagen-confirmacion aparecer"
       />
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ============== VIAJE ============== -->
+  <section id="viaje" class="seccion-viaje">
+    <h2 class="titulo-viaje">Aquí empieza tu viaje</h2>
 
-<!-- ========================
-     AQUÍ EMPIEZA TU VIAJE
-========================= -->
-<section id="viaje">
-  <div class="viaje-inner">
-    <h2 class="viaje-titulo">Aquí empieza tu viaje</h2>
-
-    <div class="viaje-escena">
-
-      <div class="viaje-cofre-wrap" id="cofreWrap" onclick="activarViaje()">
-        <video autoplay loop muted playsinline class="viaje-video">
+    <div class="escena-viaje">
+      <div class="cofre-circulo" onclick="activarViaje()">
+        <video autoplay loop muted playsinline class="video-cofre">
           <source src="https://res.cloudinary.com/dayzeqqf1/video/upload/v1779385618/CofreRender_hmlxdy.mp4" type="video/mp4">
         </video>
       </div>
 
-      <button class="viaje-btn" id="viajeBtn" onclick="mostrarPago()">
+      <button class="boton-tesoro" onclick="mostrarPago()">
         Agrega el tesoro<br>de este mes
       </button>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ========================
-     FINALIZA TU INVERSIÓN
-========================= -->
-<section id="pago">
-  <div class="pago-inner">
-    <h2 class="pago-titulo">Finaliza tu inversión</h2>
-    <p class="pago-sub">Asegura hoy el tesoro de su educación. El proceso es rápido y 100% seguro.</p>
+  <!-- ============== PAGO ============== -->
+  <section id="pago" class="seccion-pago">
+    <h2 class="titulo-pago">Finaliza tu inversión</h2>
+    <p class="subtitulo-pago">Asegura hoy el tesoro de su educación. El proceso es rápido y 100% seguro.</p>
 
-    <div class="pago-grid">
+    <div class="grilla-pago">
 
-      <div class="pago-col">
-        <div class="pago-col-titulo"><i class="ti ti-credit-card"></i> Detalles de Pago</div>
-        <div class="pago-field-label">Nombre en la tarjeta</div>
-        <div class="pago-field"></div>
-        <div class="pago-field-label">Número de tarjeta</div>
-        <div class="pago-field"></div>
-        <div class="pago-row">
+      <div class="columna-pago">
+        <h3 class="titulo-columna">💳 Detalles de Pago</h3>
+        <label>Nombre en la tarjeta</label>
+        <input type="text">
+        <label>Número de tarjeta</label>
+        <input type="text">
+        <div class="fila-pago">
           <div>
-            <div class="pago-field-label">Fecha de Exp. (MM/AA)</div>
-            <div class="pago-field"></div>
+            <label>Fecha de Exp. (MM/AA)</label>
+            <input type="text">
           </div>
           <div>
-            <div class="pago-field-label">CVV</div>
-            <div class="pago-field"></div>
+            <label>CVV</label>
+            <input type="text">
           </div>
         </div>
-        <button class="pago-submit">Pagar y Continuar →</button>
+        <button class="boton-pagar">Pagar y Continuar →</button>
       </div>
 
-      <div class="pago-col">
-        <div class="pago-col-titulo">Resumen de Inversión</div>
-        <div class="pago-resumen-head">
-          <span class="pago-plan-nombre">Seguro Educativo 'Tesoro'</span>
-          <span class="pago-plan-sub">Plan Universidad Garantizada</span>
+      <div class="columna-pago">
+        <h3 class="titulo-columna">Resumen de Inversión</h3>
+        <div class="resumen-encabezado">
+          <strong>Seguro Educativo 'Tesoro'</strong>
+          <small>Plan Universidad Garantizada</small>
         </div>
-        <div class="pago-resumen-item">
+        <div class="resumen-fila">
           <span>Aporte Inicial</span>
           <span>$ 1.500.000 COP</span>
         </div>
-        <div class="pago-resumen-item">
+        <div class="resumen-fila">
           <span>Cargos Administrativos</span>
           <span>$ 0 COP</span>
         </div>
-        <div class="pago-total">
+        <div class="resumen-total">
           <span>Total a Pagar</span>
           <span>$ 1.500.000 <small>COP</small></span>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- ========================
-       FOOTER
-  ========================= -->
-  <footer>
-    <div class="f-logo"><span>Global</span><span>Seguros</span></div>
-    <p>© 2025 Global Seguros de Vida S.A. · Vigilado Superintendencia Financiera de Colombia</p>
+  <!-- ============== PIE DE PÁGINA ============== -->
+  <footer class="pie-pagina">
+    <p class="logo-pie"><span>Global</span><span>Seguros</span></p>
+    <p class="copyright">© 2025 Global Seguros de Vida S.A. · Vigilado Superintendencia Financiera de Colombia</p>
   </footer>
 
-  <!-- ========================
-       JAVASCRIPT
-  ========================= -->
   <script src="app.js" defer></script>
 </body>
 </html>
