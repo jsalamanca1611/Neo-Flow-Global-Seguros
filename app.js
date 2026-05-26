@@ -23,3 +23,23 @@ function mostrarPago() {
   pago.classList.add('pago--visible');
   setTimeout(() => pago.scrollIntoView({ behavior: 'smooth' }), 120);
 }
+
+// ============================================================================
+// PAGE LOADER · Intercepta ir('login') para reproducir la animación
+// ============================================================================
+(() => {
+  const loader = document.getElementById('pageLoader');
+  if (!loader) return;
+
+  const irOriginal = window.ir;
+
+  window.ir = (destino) => {
+    if (destino !== 'login') return irOriginal?.(destino);
+
+    loader.classList.add('is-active');
+    setTimeout(() => irOriginal?.('login'), 900);
+    loader.addEventListener('animationend', () => {
+      loader.classList.remove('is-active');
+    }, { once: true });
+  };
+})();
