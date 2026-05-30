@@ -38,3 +38,56 @@ body {
 
 /* resalta una palabra en azul (se usa en varias páginas) */
 .palabra-azul { color: var(--color-acento-texto); }
+
+
+/* 3. BOTONES */
+.boton {
+  display: inline-block;
+  padding: .7rem 1.6rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-weight: var(--peso-titulo);
+  font-size: .95rem;
+  cursor: pointer;
+}
+.boton:hover { opacity: .85; }
+.boton-amarillo { background: var(--color-acento);  color: var(--color-texto); }
+.boton-azul     { background: var(--color-primario); color: var(--color-superficie); }
+.boton-claro    { background: var(--color-fondo);    color: var(--color-texto); }
+.boton-borde    { background: transparent; border-color: var(--color-primario); color: var(--color-primario); }
+
+/* 4. BARRA DE NAVEGACIÓN */
+.barra-navegacion {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  background: var(--color-superficie);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo { height: 36px; }
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+  font-size: .9rem;
+  color: var(--color-texto-suave);
+}
+.menu a { cursor: pointer; }
+.menu a:hover { color: var(--color-primario); }
+.menu-activo  { color: var(--color-primario); font-weight: var(--peso-titulo); }
+.botones-navegacion { display: flex; gap: .75rem; }
+
+/* 5. ANIMACIÓN GENERAL: flotar cofres */
+@keyframes flotar {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -10px; }
+}
+
+/* 6. RESPONSIVE general - barra de navegación */
+@media (max-width: 960px) {
+  .barra-navegacion { padding: 1rem 1.5rem; }
+  .menu { display: none; }
+}
