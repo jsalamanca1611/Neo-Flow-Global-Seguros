@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalSeguros — Acceso a la plataforma</title>
+  <link rel="stylesheet" href="marca.css">
+  <link rel="stylesheet" href="acceso.css">
+</head>
+<body>
+
+  <nav class="barra-navegacion">
+    <img class="logo" src="https://jps-dev.sirv.com/Images/global_seguros.svg" alt="GlobalSeguros">
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="planes.html">Planes</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="botones-navegacion">
+      <a href="acceso.html#sesion" class="boton boton-azul">Iniciar sesión</a>
+      <a href="acceso.html#registro" class="boton boton-claro">Registrarse</a>
+    </div>
+  </nav>
+
+  <section class="acceso">
+    <div class="tarjeta-acceso">
+      <div class="pestanas">
+        <button class="pestana pestana-activa" id="pestana-sesion" onclick="location.hash = 'sesion'">Iniciar sesión</button>
+        <button class="pestana" id="pestana-registro" onclick="location.hash = 'registro'">Registrarse</button>
+      </div>
+
+      <div id="form-sesion">
+        <div class="campo">
+          <label>Correo o teléfono</label>
+          <input type="text" placeholder="Ej: maria@correo.com">
+        </div>
+        <div class="campo">
+          <label>Contraseña</label>
+          <input type="password" placeholder="Tu contraseña">
+        </div>
+        <button class="boton boton-azul boton-enviar">Entrar a la plataforma</button>
+      </div>
+
+      <div class="oculto" id="form-registro">
+        <div class="campo">
+          <label>Nombres</label>
+          <input type="text" placeholder="Ej: María Fernanda">
+        </div>
+        <div class="campo">
+          <label>Apellidos</label>
+          <input type="text" placeholder="Ej: González Pérez">
+        </div>
+        <div class="campo">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="Ej: 300 123 4567">
+        </div>
+        <div class="campo">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="Ej: maria@correo.com">
+        </div>
+        <div class="campo">
+          <label>Contraseña</label>
+          <input type="password" placeholder="Crea una contraseña">
+        </div>
+        <button class="boton boton-amarillo boton-enviar">Crear cuenta</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="acceso.js"></script>
+</body>
+</html>

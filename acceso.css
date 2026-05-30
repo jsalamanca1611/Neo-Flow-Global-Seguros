@@ -1,0 +1,30 @@
+
+.acceso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 68px);
+  padding: 2rem 1.5rem;
+}
+.tarjeta-acceso {
+  width: min(420px, 100%);
+  background: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 2rem;
+}
+.pestanas { display: flex; gap: .5rem; margin-bottom: 1.5rem; }
+.pestana {
+  flex: 1;
+  padding: .7rem;
+  border: none;
+  border-radius: 50px;
+  background: var(--color-fondo);
+  color: var(--color-texto-suave);
+  font-family: var(--fuente);
+  font-weight: var(--peso-titulo);
+  font-size: .9rem;
+  cursor: pointer;
+}
+.pestana-activa { background: var(--color-primario); color: var(--color-superficie); }
+.oculto { display: none; }
