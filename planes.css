@@ -1,0 +1,103 @@
+
+
+/* Encabezado */
+.encabezado { text-align: center; padding: 4rem 2rem 2rem; }
+.titulo-pagina {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+  line-height: 1.2;
+  margin-bottom: .9rem;
+}
+.subtitulo-pagina {
+  font-size: 1rem;
+  color: var(--color-texto-suave);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Comparador de 3 tarjetas */
+.comparador {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 3.5rem 5rem;
+  align-items: start;
+}
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform .25s ease;
+}
+.tarjeta:hover { transform: translateY(-6px); }
+.tarjeta-destacada { border: 2px solid var(--color-primario); }
+
+.cabecera {
+  text-align: center;
+  padding: 2rem 1.5rem 1.25rem;
+  background: var(--color-fondo);
+  position: relative;
+}
+.etiqueta-popular {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: var(--color-acento);
+  color: var(--color-texto);
+  font-size: .72rem;
+  font-weight: var(--peso-titulo);
+  padding: .25rem .75rem;
+  border-radius: 50px;
+}
+.cofre-tarjeta {
+  width: 96px;
+  margin: 0 auto .75rem;
+  animation: flotar 3s ease-in-out infinite;
+}
+.nombre-plan {
+  font-size: 1.05rem;
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+  line-height: 1.25;
+  margin-bottom: .35rem;
+}
+.lema-plan { font-size: .8rem; color: var(--color-texto-suave); }
+
+.cuerpo { flex: 1; padding: 1.5rem 1.75rem; }
+.grupo { margin-bottom: 1.25rem; }
+.grupo:last-child { margin-bottom: 0; }
+.titulo-grupo {
+  display: block;
+  width: fit-content;
+  font-size: .72rem;
+  font-weight: var(--peso-titulo);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-primario);
+  background: var(--color-fondo);
+  border-radius: 6px;
+  padding: .25rem .6rem;
+  margin-bottom: .65rem;
+}
+.beneficio {
+  display: flex;
+  gap: .5rem;
+  font-size: .875rem;
+  line-height: 1.4;
+  color: var(--color-texto-suave);
+  padding: .45rem 0;
+  border-bottom: 1px solid var(--color-borde);
+}
+.grupo .beneficio:last-child { border-bottom: none; }
+.icono { color: var(--color-primario); font-size: .8rem; }
+.icono-estrella { color: var(--color-acento); }
+.boton-comprar { margin: 0 1.75rem 1.75rem; text-align: center; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .comparador { grid-template-columns: 1fr; padding: 1.5rem; }
+}
