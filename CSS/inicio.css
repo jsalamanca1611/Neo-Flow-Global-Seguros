@@ -1,11 +1,19 @@
 /* Sección principal */
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .inicio {
   display: grid;
   grid-template-columns: 1fr 1.2fr 360px;
   align-items: center;
   gap: 2rem;
   padding: 3rem;
-  min-height: 90vh;
+  flex: 1;
+  min-height: 0;
 }
 .titulo-inicio {
   font-size: clamp(1.9rem, 2.8vw, 2.7rem);
@@ -79,12 +87,53 @@
 .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--color-borde); }
 .punto-activo { width: 24px; border-radius: 4px; background: var(--color-primario); }
 
+/* === Sección Motivación === */
+#motivacion {
+  background: var(--color-primario);
+  flex-shrink: 0;
+  padding: 1.25rem 2rem;
+  text-align: center;
+}
+
+.motiv-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.motiv-q {
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: var(--peso-titulo);
+  color: var(--color-superficie);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.motiv-q em {
+  font-style: normal;
+  color: var(--color-acento);
+}
+
+.motiv-s {
+  font-size: .95rem;
+  color: var(--color-superficie);
+  opacity: .7;
+}
+
+
 /* Responsive */
 @media (max-width: 960px) {
+  body {
+    height: auto;
+  }
   .inicio {
     grid-template-columns: 1fr;
     text-align: center;
     padding: 2.5rem 1.5rem;
     gap: 2.5rem;
+    flex: none;
+    min-height: auto;
+  }
+  #motivacion {
+    padding: 2.5rem 1.5rem;
   }
 }
