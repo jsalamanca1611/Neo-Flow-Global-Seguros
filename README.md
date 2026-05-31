@@ -1,7 +1,10 @@
 # Global Seguros
 Miembros del equipo Neo Flow
+
 Samuel Silva (https://github.com/SamuelSS77)
+
 Juan Salamanca (https://github.com/jsalamanca1611)
+
 Junior Smith (https://github.com/jsmmdz)
 
 ## Descripción del Proyecto
@@ -23,24 +26,41 @@ El proyecto está construido con tecnologías web nativas, por lo que no requier
 
 NEO-FLOW---GLOBAL-SEGUROS/
 │
+
 ├── HTML
-│   ├── index.html       # Página principal (Landing Page de la aseguradora)
-│   ├── planes.html      # Catálogo de seguros educativos y simulador
-│   └── acceso.html      # Portal de autenticación / login
+
+│   ├── index.html          # Página principal (Landing Page de la aseguradora)
+
+│   ├── planes.html         # Catálogo de seguros educativos y simulador
+
+│   └── acceso.html         # Portal de autenticación / login
 │
-├── CSS
-│   ├── marca.css        # Estilos globales, paleta de colores y branding
-│   ├── inicio.css       # Estilos específicos para la página principal
-│   ├── planes.css       # Estilos para la interfaz de planes y coberturas
-│   └── acceso.css       # Estilos del portal de acceso
+
+├── CSS 
+
+│   ├── marca.css           # Estilos globales, paleta de colores y branding 
+
+│   ├── inicio.css          # Estilos específicos para la página principal
+
+│   ├── planes.css          # Estilos para la interfaz de planes y coberturas
+
+│   └── acceso.css          # Estilos del portal de acceso
 │
+
 ├── JavaScript
-│   ├── app.js           # Lógica principal del sitio web
-│   ├── planes.js        # Manipulación del DOM e interactividad de los seguros
-│   ├── acceso.js        # Validaciones y manejo de datos del login
-│   └── contacto.js      # Lógica para el formulario de contacto
+
+│   ├── app.js              # Lógica principal del sitio web
+
+│   ├── planes.js           # Manipulación del DOM e interactividad de los seguros
+
+│   ├── acceso.js           # Validaciones y manejo de datos del login
+
+│   └── contacto.js         # Lógica para el formulario de contacto
+
 │
+
 └── Documentación
-    └── README.md        # Este archivo
+
+    └── README.md           # Este archivo
 
 
