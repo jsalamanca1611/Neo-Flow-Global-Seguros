@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalSeguros — Mi cuenta</title>
+  <link rel="stylesheet" href="../CSS/marca.css">
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       SECCIÓN PRIVADA COMPLETA
+       se ocultará si no hay sesión.
+       ─ Por ahora está visible directamente para maquetar.
+       ══════════════════════════════════════════════════ -->
+  <div id="pantalla-privada">
+
+    <!-- ═══════════════════════════
+         BARRA LATERAL (SIDEBAR)
+         ═══════════════════════════ -->
+    <aside class="barra-lateral">
+
+      <!-- Logo en blanco: el filter CSS lo invierte sobre fondo azul -->
+      <img class="logo-lateral"
+           src="https://jps-dev.sirv.com/Images/global_seguros.svg"
+           alt="GlobalSeguros">
+
+      <!-- Ítems de navegación del dashboard -->
+      <nav class="nav-lateral">
+        <a class="nav-item nav-activo" href="#">🏠 Inicio</a>
+        <a class="nav-item" href="#">📋 Mi Plan</a>
+        <a class="nav-item" href="#">💳 Pagos</a>
+        <a class="nav-item" href="#">📄 Documentos</a>
+        <a class="nav-item" href="../HTML/planes.html">🛡️ Ver Planes</a>
+      </nav>
+
+      <!-- Cerrar sesión: flex: 1 en nav-lateral lo empuja al fondo -->
+      <button class="boton-salir" onclick="cerrarSesion()">↩ Cerrar sesión</button>
+
+    </aside>
+
+    <!-- ═══════════════════════════════════
+         ZONA DE CONTENIDO PRINCIPAL
+         ═══════════════════════════════════ -->
+    <div class="contenido-dashboard">
+
+      <!-- Cabecera sticky: queda fija al hacer scroll en el panel -->
+      <header class="cabecera-dashboard">
+        <div class="bloque-saludo">
+          <h1 class="saludo-titulo">Hola, María 👋</h1>
+          <p class="saludo-subtitulo">Bienvenida a tu espacio de cuenta</p>
+        </div>
+        <!-- Avatar con iniciales del usuario (simulado) -->
+        <div class="avatar">MG</div>
+      </header>
+
+     
+</body>
+</html>
