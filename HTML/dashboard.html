@@ -16,9 +16,7 @@
        ══════════════════════════════════════════════════ -->
   <div id="pantalla-privada">
 
-    <!-- ═══════════════════════════
-         BARRA LATERAL (SIDEBAR)
-         ═══════════════════════════ -->
+    <!-- BARRA LATERAL (SIDEBAR) -->
     <aside class="barra-lateral">
 
       <!-- Logo en blanco: el filter CSS lo invierte sobre fondo azul -->
@@ -55,6 +53,82 @@
         <div class="avatar">MG</div>
       </header>
 
-     
+       <!-- Panel de tarjetas informativas -->
+      <main class="panel-principal">
+
+        <!-- ── TARJETA 1: Plan activo ── -->
+        <article class="tarjeta-dashboard">
+          <p class="tarjeta-titulo">Mi plan activo</p>
+          <span class="badge-plan">Activo ✔</span>
+          <h2 class="plan-nombre">GlobalUniversidad Garantizada</h2>
+          <p class="plan-detalle">
+            100% matrícula garantizada · Hasta 5 años ·
+            Seguro de vida incluido · Edad máx. 65 años
+          </p>
+
+          <!-- Barra de progreso de pagos -->
+          <div class="bloque-progreso">
+            <div class="progreso-label">
+              <span>Pagos realizados</span>
+              <span>48 de 120</span>
+            </div>
+            <div class="barra-progreso">
+              <!-- El ancho refleja el avance (40% = 48/120 pagos) -->
+              <div class="barra-relleno" style="width: 40%"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── TARJETA 2: Próximo pago ── -->
+        <article class="tarjeta-dashboard">
+          <p class="tarjeta-titulo">Próximo pago</p>
+          <p class="monto-pago">$480.000</p>
+          <p class="fecha-pago">Vence el 15 de septiembre de 2025</p>
+          <button class="boton boton-azul">Pagar ahora</button>
+        </article>
+
+        <!-- ── TARJETA 3: Documentos (fila completa) ── -->
+        <article class="tarjeta-dashboard tarjeta-ancha">
+          <p class="tarjeta-titulo">Mis documentos</p>
+          <ul class="lista-documentos">
+            <li class="item-documento">
+              📄 Póliza de seguro
+              <span>Disponible</span>
+            </li>
+            <li class="item-documento">
+              📄 Certificado de cobertura
+              <span>Disponible</span>
+            </li>
+            <li class="item-documento">
+              📄 Comprobante de pago — Ago 2025
+              <span>Disponible</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- ── TARJETA 4: Asesor asignado (fila completa) ── -->
+        <article class="tarjeta-dashboard tarjeta-ancha">
+          <p class="tarjeta-titulo">Mi asesor asignado</p>
+          <div class="asesor-info">
+            <!-- Placeholder del asesor con iniciales -->
+            <div class="asesor-avatar">JR</div>
+            <div>
+              <p class="asesor-nombre">Jorge Ramírez</p>
+              <p class="asesor-cargo">Asesor comercial · Global Seguros</p>
+            </div>
+          </div>
+          <button class="boton boton-borde"
+                  onclick="abrirContacto()">Contactar asesor</button>
+        </article>
+
+      </main>
+    </div>
+
+  </div><!-- fin #pantalla-privada -->
+
+  <!-- dashboard.js gestiona la sesión simulada (Fase 3) -->
+  <script src="../JavaScript/dashboard.js"></script>
+  <script src="../JavaScript/contacto.js"></script>
+
 </body>
 </html>
