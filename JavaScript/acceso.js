@@ -15,3 +15,19 @@ function actualizarVista() {
 
 actualizarVista();
 window.addEventListener("hashchange", actualizarVista);
+
+ 
+/* Simular inicio de sesión */
+
+function iniciarSesion() {
+  localStorage.setItem("sesion", "activa");
+  window.location.href = "dashboard.html";
+}
+ 
+/* Simular registro de usuario nuevo */
+
+function registrarUsuario() {
+  localStorage.setItem("sesion", "activa");
+  window.location.href = "dashboard.html";
+}
+ 
