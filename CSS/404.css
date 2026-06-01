@@ -23,3 +23,11 @@
   line-height: 1;
   margin-bottom: 0.5rem;
 }
+
+/* Destaca la frase de error */
+.subtitulo-404 {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-weight: var(--peso-titulo);
+  color: var(--color-texto);
+  margin-bottom: 1rem;
+}
