@@ -1,0 +1,337 @@
+
+ 
+/* ── Layout raíz: sidebar izquierdo + contenido derecho ── */
+#pantalla-privada {
+  display: grid;
+  grid-template-columns: 240px 1fr; /* sidebar fijo + contenido flexible */
+  height: 100vh;
+  overflow: hidden; /* Cada zona maneja su propio scroll por separado */
+}
+ 
+ 
+/*BARRA LATERAL (SIDEBAR) */
+ 
+.barra-lateral {
+  background: var(--color-primario);   /* azul de marca */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.25rem;
+  overflow-y: auto;
+}
+ 
+/* Filter invierte el logo a blanco para que se lea sobre fondo azul */
+.logo-lateral {
+  height: 30px;
+  margin-bottom: 2.5rem;
+  filter: brightness(0) invert(1);
+}
+ 
+/* nav-lateral ocupa todo el espacio disponible
+   y empuja .boton-salir al fondo del sidebar */
+.nav-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  flex: 1;
+}
+ 
+/* Ítem de navegación base */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, .6);
+  font-family: var(--fuente);
+  font-size: .9rem;
+  font-weight: var(--peso-titulo);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+ 
+.nav-item:hover {
+  background: rgba(255, 255, 255, .1);
+  color: var(--color-superficie);
+}
+ 
+/* Ítem activo: amarillo de marca sobre sidebar azul */
+.nav-activo {
+  background: var(--color-acento);
+  color: var(--color-texto);
+}
+ 
+/* Evita que el hover cambie el color del ítem activo */
+.nav-activo:hover {
+  background: var(--color-acento);
+  color: var(--color-texto);
+}
+ 
+/* Botón de cerrar sesión: al fondo gracias a flex:1 en .nav-lateral */
+.boton-salir {
+  width: 100%;
+  padding: .75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, .45);
+  font-family: var(--fuente);
+  font-size: .9rem;
+  font-weight: var(--peso-titulo);
+  cursor: pointer;
+  text-align: left;
+  transition: background .2s, color .2s;
+}
+ 
+.boton-salir:hover {
+  /* rgba del --color-rojo (#DC2319) con baja opacidad */
+  background: rgba(220, 35, 25, .2);
+  color: #ff8080;
+}
+ 
+ 
+/* ══════════════════════════════════
+   CONTENIDO PRINCIPAL (DERECHA)
+   ══════════════════════════════════ */
+ 
+.contenido-dashboard {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;            /* scroll aquí, no en #pantalla-privada */
+  background: var(--color-fondo);
+}
+ 
+ 
+/* ── Cabecera del dashboard ── */
+ 
+.cabecera-dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  background: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+  position: sticky;   /* se queda visible al hacer scroll */
+  top: 0;
+  z-index: 5;
+}
+ 
+.saludo-titulo {
+  font-size: 1.25rem;
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+}
+ 
+.saludo-subtitulo {
+  font-size: .85rem;
+  color: var(--color-texto-suave);
+}
+ 
+/* Avatar circular con iniciales (simulado, sin imagen) */
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primario);
+  color: var(--color-superficie);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--peso-titulo);
+  font-size: .9rem;
+  flex-shrink: 0;
+}
+ 
+ 
+/* ── Panel de tarjetas ── */
+ 
+.panel-principal {
+  padding: 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 2 columnas iguales */
+  gap: 1.5rem;
+  align-content: start;            /* filas no se estiran para llenar el alto */
+}
+ 
+/* Tarjeta base: hereda la estética de --sombra y --radio */
+.tarjeta-dashboard {
+  background: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.75rem;
+}
+ 
+/* Variante que ocupa las dos columnas del grid */
+.tarjeta-ancha { grid-column: 1 / -1; }
+ 
+/* Etiqueta superior de categoría (igual al .titulo-grupo de planes.css) */
+.tarjeta-titulo {
+  font-size: .72rem;
+  font-weight: var(--peso-titulo);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-texto-suave);
+  margin-bottom: 1rem;
+}
+ 
+ 
+/* ── Tarjeta "Mi Plan" ── */
+ 
+.badge-plan {
+  display: inline-block;
+  background: var(--color-acento);
+  color: var(--color-texto);
+  font-size: .78rem;
+  font-weight: var(--peso-titulo);
+  padding: .25rem .85rem;
+  border-radius: 50px;
+  margin-bottom: .65rem;
+}
+ 
+.plan-nombre {
+  font-size: 1.1rem;
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+  margin-bottom: .4rem;
+}
+ 
+.plan-detalle {
+  font-size: .85rem;
+  color: var(--color-texto-suave);
+  line-height: 1.6;
+}
+ 
+/* Bloque de progreso de pagos */
+.bloque-progreso { margin-top: 1.25rem; }
+ 
+.progreso-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+  color: var(--color-texto-suave);
+  margin-bottom: .4rem;
+}
+ 
+.barra-progreso {
+  height: 8px;
+  background: var(--color-borde);
+  border-radius: 50px;
+  overflow: hidden;
+}
+ 
+/* El ancho se define con style="width: X%" en el HTML (simulado) */
+.barra-relleno {
+  height: 100%;
+  background: var(--color-primario);
+  border-radius: 50px;
+}
+ 
+ 
+/* ── Tarjeta "Próximo Pago" ── */
+ 
+.monto-pago {
+  font-size: 2.2rem;
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+  line-height: 1;
+  margin-bottom: .3rem;
+}
+ 
+.fecha-pago {
+  font-size: .85rem;
+  color: var(--color-texto-suave);
+  margin-bottom: 1.25rem;
+}
+ 
+ 
+/* ── Tarjeta "Documentos" ── */
+ 
+.lista-documentos {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+ 
+.item-documento {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+  background: var(--color-fondo);
+  border-radius: 10px;
+  font-size: .875rem;
+  color: var(--color-texto);
+}
+ 
+.item-documento span {
+  font-size: .78rem;
+  font-weight: var(--peso-titulo);
+  color: var(--color-texto-suave);
+}
+ 
+ 
+/* ── Tarjeta "Mi Asesor" ── */
+ 
+.asesor-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+ 
+/* Avatar del asesor — mismo patrón que .avatar del usuario */
+.asesor-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-fondo);
+  border: 2px solid var(--color-borde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--peso-titulo);
+  font-size: .9rem;
+  color: var(--color-primario);
+  flex-shrink: 0;
+}
+ 
+.asesor-nombre {
+  font-size: .95rem;
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+}
+ 
+.asesor-cargo {
+  font-size: .82rem;
+  color: var(--color-texto-suave);
+}
+ 
+ 
+/* ═══════════════════════════════
+   RESPONSIVE (máx. 960px)
+   ═══════════════════════════════ */
+ 
+@media (max-width: 960px) {
+ 
+  /* El grid pasa a 1 columna y el alto ya no está fijo */
+  #pantalla-privada {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+ 
+  /* Sidebar oculto en móvil (Fase 3 puede añadir un menú hamburguesa) */
+  .barra-lateral { display: none; }
+ 
+  /* Las tarjetas van en una sola columna */
+  .panel-principal {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+ 
+  /* tarjeta-ancha vuelve a ocupar solo 1 columna */
+  .tarjeta-ancha { grid-column: 1; }
+ 
+  .cabecera-dashboard { padding: 1rem 1.5rem; }
+}
+ 
