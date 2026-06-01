@@ -121,8 +121,22 @@
   font-size: 1.25rem;
   font-weight: var(--peso-titulo);
   color: var(--color-primario);
+  margin: 0;
 }
  
+.saludo-con-personaje {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.personaje-bienvenida {
+  height: 45px; /* Esto es suficiente para que no se estalle */
+}
+
+
+
+
 .saludo-subtitulo {
   font-size: .85rem;
   color: var(--color-texto-suave);
