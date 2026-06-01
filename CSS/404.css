@@ -13,3 +13,13 @@
   padding: 2rem;
   animation: flotar 3s ease-in-out infinite; 
 }
+
+/* Muestra el "404" en un tamaño gigante y el tamaño se encoge solo en 
+   celulares y se agranda en computadoras sin dañarse. */
+.titulo-404 {
+  font-size: clamp(6rem, 15vw, 10rem); 
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
