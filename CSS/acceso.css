@@ -28,3 +28,10 @@
 }
 .pestana-activa { background: var(--color-primario); color: var(--color-superficie); }
 .oculto { display: none; }
+
+.alerta-campo {
+  font-size: .83rem;
+  color: var(--color-rojo);
+  text-align: center;
+  margin-top: .65rem;
+}
