@@ -46,7 +46,37 @@ function cambiarPanel(idDelPanel) {
   // Paso B: buscamos el panel que nos pidieron y le quitamos "oculto"
   var elPanelQueQuieremos = document.getElementById(idDelPanel);
   elPanelQueQuieremos.classList.remove("oculto");
+
+
+  // Si el panel que se abre es "Pagos", activamos su barra de progreso
+  if (idDelPanel === "panel-pagos") {
+    animarBarraDePagos();
+  }
+
 }
+
+// Anima la barra del panel de pagos.
+// Se llama desde cambiarPanel cada vez que el usuario abre ese panel.
+function animarBarraDePagos() {
+
+  var barraTotal = document.getElementById("barra-relleno-total");
+  var textoTotal = document.getElementById("texto-progreso-pagos");
+
+  // Reutilizamos las variables ya calculadas más abajo en este mismo archivo
+  textoTotal.textContent =
+    pagosRealizados + " de " + totalDePagos + " (" + porcentajeRedondeado + "%)";
+
+  // Reiniciamos a 0 para que la animación se reproduzca cada vez que se abra el panel,
+  // no solo la primera vez
+  barraTotal.style.width = "0";
+
+  setTimeout(function() {
+    barraTotal.style.width = porcentajeRedondeado + "%";
+  }, 100);
+}
+
+
+
 
 
 // Recogemos todos los ítems del menú lateral

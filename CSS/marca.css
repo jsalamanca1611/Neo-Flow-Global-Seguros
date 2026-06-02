@@ -179,9 +179,9 @@ body {
   margin-bottom: 1.25rem;
 }
 .exito-mensaje {
-  font-size: .95rem;
-  color: var(--color-texto-suave);
-  line-height: 1.7;
+  font-size: 1.25rem;
+  color: var(--color-texto);
+  line-height: 1.9;
 }
 .exito-imagen-marco {
   width: 220px;
