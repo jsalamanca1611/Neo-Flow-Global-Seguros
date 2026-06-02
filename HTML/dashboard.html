@@ -26,10 +26,8 @@
 
       <!-- Ítems de navegación del dashboard -->
       <nav class="nav-lateral">
-        <a class="nav-item nav-activo" href="#"> Inicio</a>
-        <a class="nav-item" href="#"> Mi Plan</a>
-        <a class="nav-item" href="#"> Pagos</a>
-        <a class="nav-item" href="#"> Documentos</a>
+        <a class="nav-item nav-activo" href="#" data-panel="panel-inicio"> Inicio</a>
+        <a class="nav-item" href="#" data-panel="panel-pagos"> Pagos</a>
         <a class="nav-item" href="../HTML/planes.html"> Ver Planes</a>
       </nav>
 
@@ -58,7 +56,7 @@
       </header>
 
        <!-- Panel de tarjetas informativas -->
-      <main class="panel-principal">
+      <main class="panel-principal" id="panel-inicio">
 
         <!-- ── TARJETA 1: Plan activo ── -->
         <article class="tarjeta-dashboard">
@@ -126,12 +124,29 @@
         </article>
 
       </main>
+
+
+      <!-- PANEL DE PAGOS: oculto por defecto, aparece al clicar "Pagos" en el sidebar -->
+      <!-- La clase "oculto" viene de marca.css: display: none !important -->
+      <main class="panel-principal oculto" id="panel-pagos">
+
+        <article class="tarjeta-dashboard tarjeta-ancha">
+          <p class="tarjeta-titulo">Historial de pagos</p>
+          <!-- El JS escribe aquí el conteo de registros -->
+          <p class="resumen-historial" id="resumen-historial"></p>
+          <!-- El JS construye y pega la tabla aquí -->
+          <div id="contenedor-historial"></div>
+        </article>
+
+      </main>
+
     </div>
 
   </div><!-- fin #pantalla-privada -->
 
   <!-- dashboard.js gestiona la sesión simulada (Fase 3) -->
   <script src="../JavaScript/dashboard.js"></script>
+  <script src="../JavaScript/historial.js"></script>
   <script src="../JavaScript/contacto.js"></script>
 
 </body>

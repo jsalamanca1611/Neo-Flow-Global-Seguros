@@ -321,6 +321,79 @@
   color: var(--color-texto-suave);
 }
  
+
+/* ═══════════════════════════════════════
+   HISTORIAL DE PAGOS
+   ═══════════════════════════════════════ */
+
+.resumen-historial {
+  font-size: .82rem;
+  color: var(--color-texto-suave);
+  margin-bottom: 1rem;
+}
+
+#contenedor-historial {
+  overflow-x: auto;
+}
+
+.tabla-pagos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-pagos th {
+  text-align: left;
+  font-size: .72rem;
+  font-weight: var(--peso-titulo);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-texto-suave);
+  padding: .65rem 1rem;
+  border-bottom: 2px solid var(--color-borde);
+  white-space: nowrap;
+}
+
+.tabla-pagos td {
+  padding: .9rem 1rem;
+  font-size: .875rem;
+  color: var(--color-texto);
+  border-bottom: 1px solid var(--color-borde);
+  vertical-align: middle;
+}
+
+.tabla-pagos tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-pagos tbody tr:hover {
+  background: var(--color-fondo);
+}
+
+/* ── Badges de estado ── */
+
+.estado-pago {
+  display: inline-block;
+  padding: .28rem .9rem;
+  border-radius: 50px;
+  font-size: .75rem;
+  font-weight: var(--peso-titulo);
+  white-space: nowrap;
+}
+
+.estado-pagado {
+  background: var(--color-primario);
+  color: var(--color-superficie);
+}
+
+.estado-pendiente {
+  background: var(--color-acento);
+  color: var(--color-texto);
+}
+
+.estado-mora {
+  background: var(--color-rojo);
+  color: var(--color-superficie);
+}
  
 /* ═══════════════════════════════
    RESPONSIVE (máx. 960px)
