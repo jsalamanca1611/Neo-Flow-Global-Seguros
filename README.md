@@ -63,4 +63,18 @@ NEO-FLOW---GLOBAL-SEGUROS/
 
     └── README.md           # Este archivo
 
+Imagenes:
+
+<img width="1919" height="937" alt="image" src="https://github.com/user-attachments/assets/f822f8be-fb69-466e-b82a-8cb9dda34d51" />
+<img width="1901" height="856" alt="image" src="https://github.com/user-attachments/assets/66129d54-81f0-4785-99f9-a7646eae0952" />
+<img width="1900" height="932" alt="image" src="https://github.com/user-attachments/assets/9d1f6670-b084-498e-8bb8-fe789d745451" />
+<img width="1216" height="888" alt="image" src="https://github.com/user-attachments/assets/c813cc57-bb26-4373-ad3c-15b8db7d9ca1" />
+<img width="1637" height="787" alt="image" src="https://github.com/user-attachments/assets/8300f050-ff03-4205-8b5d-3f14512a0512" />
+
+
+
+
+
+
+
 
