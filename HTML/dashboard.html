@@ -70,15 +70,16 @@
 
           <!-- Barra de progreso de pagos -->
           <div class="bloque-progreso">
-            <div class="progreso-label">
+           <div class="progreso-label">
               <span>Pagos realizados</span>
-              <span>48 de 120</span>
-            </div>
-            <div class="barra-progreso">
-              <!-- El ancho refleja el avance (40% = 48/120 pagos) -->
-              <div class="barra-relleno" style="width: 40%"></div>
-            </div>
-          </div>
+             <!-- El JS escribirá aquí "48 de 120 (40%)" en tiempo real -->
+              <span id="texto-progreso" class="progreso-contador">Cargando...</span>
+           </div>
+        <div class="barra-progreso">
+           <!-- Sin style="width" aquí: el JavaScript lo inyecta dinámicamente -->
+          <div class="barra-relleno" id="barra-relleno-pagos"></div>
+        </div>
+        </div>
         </article>
 
         <!-- ── TARJETA 2: Próximo pago ── -->

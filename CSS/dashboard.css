@@ -237,11 +237,13 @@
 /* El ancho se define con style="width: X%" en el HTML (simulado) */
 .barra-relleno {
   height: 100%;
-  background: var(--color-primario);
+  width: 0;                                                          /* ← Parte en 0 para que la animación tenga de dónde moverse */
+  background: linear-gradient(90deg, var(--color-primario), var(--color-acento-texto)); /* ← Gradiente azul con variables ya existentes */
   border-radius: 50px;
+  transition: width 1.2s ease;                                       /* ← El CSS escucha el cambio de ancho y lo convierte en movimiento */
+  box-shadow: 0 2px 8px rgba(0, 53, 128, .25);
 }
- 
- 
+
 /* ── Tarjeta "Próximo Pago" ── */
  
 .monto-pago {
@@ -395,6 +397,12 @@
   color: var(--color-superficie);
 }
  
+/* Resalta el texto "48 de 120 (40%)" con el azul de marca */
+.progreso-contador {
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+}
+
 /* ═══════════════════════════════
    RESPONSIVE (máx. 960px)
    ═══════════════════════════════ */
@@ -421,4 +429,3 @@
  
   .cabecera-dashboard { padding: 1rem 1.5rem; }
 }
- 
