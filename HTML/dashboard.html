@@ -131,6 +131,25 @@
       <!-- La clase "oculto" viene de marca.css: display: none !important -->
       <main class="panel-principal oculto" id="panel-pagos">
 
+
+  <!-- ── Tarjeta nueva: resumen visual del contrato ── -->
+  <article class="tarjeta-dashboard tarjeta-ancha">
+    <p class="tarjeta-titulo">Progreso del contrato</p>
+    <div class="bloque-progreso">
+      <div class="progreso-label">
+        <span>Pagos completados</span>
+        <!-- El JS escribe aquí "48 de 120 (40%)" cada vez que se abre el panel -->
+        <span id="texto-progreso-pagos" class="progreso-contador">Cargando...</span>
+      </div>
+      <div class="barra-progreso">
+        <!-- El JS anima esta barra cada vez que el panel se hace visible -->
+        <div class="barra-relleno" id="barra-relleno-total"></div>
+      </div>
+    </div>
+  </article>
+
+
+
         <article class="tarjeta-dashboard tarjeta-ancha">
           <p class="tarjeta-titulo">Historial de pagos</p>
           <!-- El JS escribe aquí el conteo de registros -->
