@@ -29,12 +29,13 @@ NEO-FLOW---GLOBAL-SEGUROS/
 
 ├── HTML
 
-│   ├── index.html          # Página principal (Landing Page de la aseguradora)
 
 │   ├── planes.html         # Catálogo de seguros educativos y simulador
 
 │   └── acceso.html         # Portal de autenticación / login
-│
+
+│   └── dashboard.html      # Progreso del usuario con sus pagos
+
 
 ├── CSS 
 
@@ -45,7 +46,9 @@ NEO-FLOW---GLOBAL-SEGUROS/
 │   ├── planes.css          # Estilos para la interfaz de planes y coberturas
 
 │   └── acceso.css          # Estilos del portal de acceso
-│
+
+│   └── 404.css             # Estilos para página de error 404
+
 
 ├── JavaScript
 
@@ -57,11 +60,17 @@ NEO-FLOW---GLOBAL-SEGUROS/
 
 │   └── contacto.js         # Lógica para el formulario de contacto
 
-│
 
-└── Documentación
+└── Por fuera
 
-    └── README.md           # Este archivo
+│   ├── index.html          # Página principal (Landing Page de la aseguradora)
+
+│   └── 404.html            # Página de error 404
+
+│   └── GS Manual Identidad Marca 2023.pdf  
+
+│   └── README.md           # Este archivo
+
 
 Imagenes:
 
@@ -70,6 +79,7 @@ Imagenes:
 <img width="1900" height="932" alt="image" src="https://github.com/user-attachments/assets/9d1f6670-b084-498e-8bb8-fe789d745451" />
 <img width="1216" height="888" alt="image" src="https://github.com/user-attachments/assets/c813cc57-bb26-4373-ad3c-15b8db7d9ca1" />
 <img width="1637" height="787" alt="image" src="https://github.com/user-attachments/assets/8300f050-ff03-4205-8b5d-3f14512a0512" />
+<img width="1136" height="566" alt="image" src="https://github.com/user-attachments/assets/37e7bd82-843b-4f80-b5dc-c5eeac111e47" />
 
 
 
